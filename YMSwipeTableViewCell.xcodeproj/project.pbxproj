@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA7F76691B7A977D00184BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76681B7A977D00184BAE /* main.m */; };
+		EA7F766C1B7A977D00184BAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F766B1B7A977D00184BAE /* AppDelegate.m */; };
+		EA7F766F1B7A977D00184BAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F766E1B7A977D00184BAE /* ViewController.m */; };
+		EA7F76741B7A977D00184BAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7F76731B7A977D00184BAE /* Images.xcassets */; };
+		EA7F76771B7A977D00184BAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7F76751B7A977D00184BAE /* LaunchScreen.xib */; };
+		EA7F76831B7A977D00184BAE /* YMSwipeTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76821B7A977D00184BAE /* YMSwipeTableViewCellTests.m */; };
+		EA7F76931B7D1FE700184BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7F76921B7D1FE700184BAE /* Main.storyboard */; };
+		EA7F769C1B8D3CED00184BAE /* YMTwoButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F769B1B8D3CED00184BAE /* YMTwoButtonSwipeView.m */; };
+		EA7F769F1B8E6E7000184BAE /* YMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F769E1B8E6E7000184BAE /* YMTableViewCell.m */; };
+		EA7F76A21B8FBAD900184BAE /* YMOneButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */; };
+		EA7F76AB1B9A343F00184BAE /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA7F767D1B7A977D00184BAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7F765B1B7A977D00184BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7F76621B7A977D00184BAE;
+			remoteInfo = YMSwipeTableViewCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA7F76631B7A977D00184BAE /* YMSwipeTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMSwipeTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7F76671B7A977D00184BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7F76681B7A977D00184BAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA7F766A1B7A977D00184BAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA7F766B1B7A977D00184BAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA7F766D1B7A977D00184BAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA7F766E1B7A977D00184BAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA7F76731B7A977D00184BAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA7F76761B7A977D00184BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EA7F767C1B7A977D00184BAE /* YMSwipeTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMSwipeTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7F76811B7A977D00184BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7F76821B7A977D00184BAE /* YMSwipeTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSwipeTableViewCellTests.m; sourceTree = "<group>"; };
+		EA7F76921B7D1FE700184BAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EA7F769A1B8D3CED00184BAE /* YMTwoButtonSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTwoButtonSwipeView.h; sourceTree = "<group>"; };
+		EA7F769B1B8D3CED00184BAE /* YMTwoButtonSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTwoButtonSwipeView.m; sourceTree = "<group>"; };
+		EA7F769D1B8E6E7000184BAE /* YMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTableViewCell.h; sourceTree = "<group>"; };
+		EA7F769E1B8E6E7000184BAE /* YMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTableViewCell.m; sourceTree = "<group>"; };
+		EA7F76A01B8FBAD900184BAE /* YMOneButtonSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMOneButtonSwipeView.h; sourceTree = "<group>"; };
+		EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOneButtonSwipeView.m; sourceTree = "<group>"; };
+		EA7F76A91B9A343F00184BAE /* UITableViewCell+Swipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+Swipe.h"; path = "PodFiles/UITableViewCell+Swipe.h"; sourceTree = "<group>"; };
+		EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+Swipe.m"; path = "PodFiles/UITableViewCell+Swipe.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA7F76601B7A977D00184BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7F76791B7A977D00184BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA7F765A1B7A977D00184BAE = {
+			isa = PBXGroup;
+			children = (
+				EA7F76661B7A977D00184BAE /* Supporting Files */,
+				EA7F76A51B9A32D100184BAE /* PodFiles */,
+				EA7F76651B7A977D00184BAE /* YMSwipeTableViewCell */,
+				EA7F767F1B7A977D00184BAE /* YMSwipeTableViewCellTests */,
+				EA7F76641B7A977D00184BAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA7F76641B7A977D00184BAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F76631B7A977D00184BAE /* YMSwipeTableViewCell.app */,
+				EA7F767C1B7A977D00184BAE /* YMSwipeTableViewCellTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA7F76651B7A977D00184BAE /* YMSwipeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F766A1B7A977D00184BAE /* AppDelegate.h */,
+				EA7F766B1B7A977D00184BAE /* AppDelegate.m */,
+				EA7F766D1B7A977D00184BAE /* ViewController.h */,
+				EA7F766E1B7A977D00184BAE /* ViewController.m */,
+				EA7F769D1B8E6E7000184BAE /* YMTableViewCell.h */,
+				EA7F769E1B8E6E7000184BAE /* YMTableViewCell.m */,
+				EA7F769A1B8D3CED00184BAE /* YMTwoButtonSwipeView.h */,
+				EA7F769B1B8D3CED00184BAE /* YMTwoButtonSwipeView.m */,
+				EA7F76A01B8FBAD900184BAE /* YMOneButtonSwipeView.h */,
+				EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */,
+				EA7F76921B7D1FE700184BAE /* Main.storyboard */,
+				EA7F76731B7A977D00184BAE /* Images.xcassets */,
+				EA7F76751B7A977D00184BAE /* LaunchScreen.xib */,
+			);
+			path = YMSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA7F76661B7A977D00184BAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F76671B7A977D00184BAE /* Info.plist */,
+				EA7F76681B7A977D00184BAE /* main.m */,
+			);
+			name = "Supporting Files";
+			path = YMSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		EA7F767F1B7A977D00184BAE /* YMSwipeTableViewCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F76821B7A977D00184BAE /* YMSwipeTableViewCellTests.m */,
+				EA7F76801B7A977D00184BAE /* Supporting Files */,
+			);
+			path = YMSwipeTableViewCellTests;
+			sourceTree = "<group>";
+		};
+		EA7F76801B7A977D00184BAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F76811B7A977D00184BAE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA7F76A51B9A32D100184BAE /* PodFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F76A91B9A343F00184BAE /* UITableViewCell+Swipe.h */,
+				EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */,
+			);
+			name = PodFiles;
+			path = YMSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA7F76861B7A977D00184BAE /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell" */;
+			buildPhases = (
+				EA7F765F1B7A977D00184BAE /* Sources */,
+				EA7F76601B7A977D00184BAE /* Frameworks */,
+				EA7F76611B7A977D00184BAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YMSwipeTableViewCell;
+			productName = YMSwipeTableViewCell;
+			productReference = EA7F76631B7A977D00184BAE /* YMSwipeTableViewCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA7F767B1B7A977D00184BAE /* YMSwipeTableViewCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA7F76891B7A977D00184BAE /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCellTests" */;
+			buildPhases = (
+				EA7F76781B7A977D00184BAE /* Sources */,
+				EA7F76791B7A977D00184BAE /* Frameworks */,
+				EA7F767A1B7A977D00184BAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA7F767E1B7A977D00184BAE /* PBXTargetDependency */,
+			);
+			name = YMSwipeTableViewCellTests;
+			productName = YMSwipeTableViewCellTests;
+			productReference = EA7F767C1B7A977D00184BAE /* YMSwipeTableViewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA7F765B1B7A977D00184BAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Microsoft;
+				TargetAttributes = {
+					EA7F76621B7A977D00184BAE = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EA7F767B1B7A977D00184BAE = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EA7F76621B7A977D00184BAE;
+					};
+				};
+			};
+			buildConfigurationList = EA7F765E1B7A977D00184BAE /* Build configuration list for PBXProject "YMSwipeTableViewCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA7F765A1B7A977D00184BAE;
+			productRefGroup = EA7F76641B7A977D00184BAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */,
+				EA7F767B1B7A977D00184BAE /* YMSwipeTableViewCellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA7F76611B7A977D00184BAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7F76771B7A977D00184BAE /* LaunchScreen.xib in Resources */,
+				EA7F76741B7A977D00184BAE /* Images.xcassets in Resources */,
+				EA7F76931B7D1FE700184BAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7F767A1B7A977D00184BAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA7F765F1B7A977D00184BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7F76A21B8FBAD900184BAE /* YMOneButtonSwipeView.m in Sources */,
+				EA7F769C1B8D3CED00184BAE /* YMTwoButtonSwipeView.m in Sources */,
+				EA7F766F1B7A977D00184BAE /* ViewController.m in Sources */,
+				EA7F766C1B7A977D00184BAE /* AppDelegate.m in Sources */,
+				EA7F76691B7A977D00184BAE /* main.m in Sources */,
+				EA7F769F1B8E6E7000184BAE /* YMTableViewCell.m in Sources */,
+				EA7F76AB1B9A343F00184BAE /* UITableViewCell+Swipe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7F76781B7A977D00184BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7F76831B7A977D00184BAE /* YMSwipeTableViewCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA7F767E1B7A977D00184BAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */;
+			targetProxy = EA7F767D1B7A977D00184BAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA7F76751B7A977D00184BAE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA7F76761B7A977D00184BAE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA7F76841B7A977D00184BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA7F76851B7A977D00184BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA7F76871B7A977D00184BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YMSwipeTableViewCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA7F76881B7A977D00184BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YMSwipeTableViewCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA7F768A1B7A977D00184BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YMSwipeTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMSwipeTableViewCell.app/YMSwipeTableViewCell";
+			};
+			name = Debug;
+		};
+		EA7F768B1B7A977D00184BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YMSwipeTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMSwipeTableViewCell.app/YMSwipeTableViewCell";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA7F765E1B7A977D00184BAE /* Build configuration list for PBXProject "YMSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7F76841B7A977D00184BAE /* Debug */,
+				EA7F76851B7A977D00184BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA7F76861B7A977D00184BAE /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7F76871B7A977D00184BAE /* Debug */,
+				EA7F76881B7A977D00184BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA7F76891B7A977D00184BAE /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7F768A1B7A977D00184BAE /* Debug */,
+				EA7F768B1B7A977D00184BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA7F765B1B7A977D00184BAE /* Project object */;
+}

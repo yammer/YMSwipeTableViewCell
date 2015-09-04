@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>97E1C227-B00C-475C-B4B7-5D156D3B31E8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YMSwipeTableViewCell</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>35437E58CEA477B442667A45CA0DAAF68B67C7AD</key>
+		<string>https://github.com/CocoaPods/pod-template.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YMSwipeTableViewCell.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>35437E58CEA477B442667A45CA0DAAF68B67C7AD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CocoaPods/pod-template.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>35437E58CEA477B442667A45CA0DAAF68B67C7AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>35437E58CEA477B442667A45CA0DAAF68B67C7AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YMSwipeTableViewCell</string>
+		</dict>
+	</array>
+</dict>
+</plist>
