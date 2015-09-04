@@ -1,0 +1,25 @@
+# OS X
+.DS_Store
+
+# XCode
+build/*
+*.pbxuser
+*.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+xcuserdata/
+project.xcworkspace/
+xcshareddata/
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xccheckout
+*.hmap
+*.ipa
+
+# Bundler
+.bundle
