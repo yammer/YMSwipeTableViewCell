@@ -8,10 +8,11 @@ YMSwipeTableViewCell is a lightweight library that enables table view cell swipi
 ##Features
 
 * Users have complete control over the views exposed during a left or right swipe.
+
 * Configurable cell swipe animation:
-    * Unmasking
-<p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellUnmasking.gif?raw=true”/></p>
-    * Trailing
+    - Unmasking 
+<p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellUnmasking.gif?raw=true"/></p>
+    - Trailing
 <p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellTrailing.gif?raw=true"/></p>
 * Block callback for cell swiping or cell mode change so that actions can be taken at any time during the swipe.
 * Configurable values for the snap-to-right or snap-to-left views threshold.
