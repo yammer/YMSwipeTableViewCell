@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, YATableSwipeMode) {
 /** Type of swipe effect */
 typedef NS_ENUM(NSInteger, YATableSwipeEffect) {
     /** Swipe image is underneath the cell and is fixed during a swipe. */
-    YATableSwipeEffectDefault,
+    YATableSwipeEffectUnmask,
     /** The swipe image is clamped to the cell and is moving with the cell during a swipe. */
     YATableSwipeEffectTrail
 };
@@ -66,7 +66,7 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
 
 @interface UITableViewCell (Swipe)
 
-/** Sets the type of swipe effect. The default value is YATableSwipeEffectDefault. */
+/** Sets the type of swipe effect. The default value is YATableSwipeEffectUnmask. */
 @property (nonatomic, readwrite) YATableSwipeEffect swipeEffect;
 
 /** This flags determines if multipe cells can be swiped at one time. The default value is NO. */

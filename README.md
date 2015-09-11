@@ -1,7 +1,9 @@
 YMSwipeTableViewCell
 ===============
 
-YMSwipeTableViewCell is a lightweight library that enables table view cell swiping (seen in most mail applications). It is implemented as a UITableViewCell class category and can detect left or right horizontal swipes. Upon a left or right swipe, a swipe view is exposed. This library is meant to be flexible, so that any views can be exposed during a swipe and a myriad of actions can be taken during the swipe (e.g., swipe view animations, or cell snap back or destruction at the completion of a swipe). The example app shows the right view as two buttons and the left view as a single button with a checkmark's alpha animating in proportion to the swipe content offset:
+YMSwipeTableViewCell is a lightweight library that enables table view cell swiping (seen in most mail applications). It is implemented as a UITableViewCell class category and can detect left or right horizontal swipes. Upon a left or right swipe, a swipe view is exposed. This library is meant to be flexible, so that any views can be exposed during a swipe and a myriad of actions can be taken during the swipe (e.g., swipe view animations, or cell snap back or destruction at the completion of a swipe). 
+
+The example app shows the right view as two buttons and the left view as a single button with a checkmark's alpha animating in proportion to the swipe content offset:
                             
 <p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellSampleApp.gif?raw=true"/></p>
 
@@ -28,6 +30,7 @@ YMSwipeTableViewCell is a lightweight library that enables table view cell swipi
 ```objc
 #import "UITableViewCell+Swipe.h"
 ```
+* Create the desired swipe views. In this demo app, a two-button view (YMTwoButtonSwipeView) is created for the right swipe view and a single-button view (YMOneButtonSwipeView) is created for the left swipe view. 
 
 * Initialize the left and right views:
 
@@ -49,7 +52,7 @@ self.leftSwipeView = leftView;
 * Set the swipe effect:
 
 ```objc
-[cell setSwipeEffect:YATableSwipeEffectDefault];
+[cell setSwipeEffect:YATableSwipeEffectUnmask];
 ```
 
 * Set the allowMultiple flag to enable multiple cells to be swiped at once if desired:

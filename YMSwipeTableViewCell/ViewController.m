@@ -44,7 +44,7 @@ static const NSInteger kYMTableViewNumberOfRows = 50;
     YMTableViewCell *cell = (YMTableViewCell*)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YMTableViewCell class]) forIndexPath:indexPath];
     cell.delegate = self;
     if (indexPath.row % 2 == 0) {
-        [cell setSwipeEffect:YATableSwipeEffectDefault];
+        [cell setSwipeEffect:YATableSwipeEffectUnmask];
         cell.textLabel.text = kYMSwipeTableViewCell0Title;
         cell.detailTextLabel.text = kYMSwipeTableViewCellDetailTitleSwipeLeftRight;
         cell.backgroundColor = [self unmaskingCellColor];

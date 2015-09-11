@@ -114,9 +114,9 @@ static const NSInteger kRightSwipeViewWidth = 200;
     
     // Make some layout adjustments to the image in the left swipe view
     YMOneButtonSwipeView *leftView = (YMOneButtonSwipeView *)self.leftSwipeView;
-    leftView.aButton.contentHorizontalAlignment = (self.swipeEffect == YATableSwipeEffectDefault) ? UIControlContentHorizontalAlignmentLeft : UIControlContentHorizontalAlignmentRight;
-    CGFloat leftInset = (self.swipeEffect == YATableSwipeEffectDefault) ? 20.0 : 0;
-    CGFloat rightInset = (self.swipeEffect == YATableSwipeEffectDefault) ? 0 : 20.0;
+    leftView.aButton.contentHorizontalAlignment = (self.swipeEffect == YATableSwipeEffectUnmask) ? UIControlContentHorizontalAlignmentLeft : UIControlContentHorizontalAlignmentRight;
+    CGFloat leftInset = (self.swipeEffect == YATableSwipeEffectUnmask) ? 20.0 : 0;
+    CGFloat rightInset = (self.swipeEffect == YATableSwipeEffectUnmask) ? 0 : 20.0;
     [leftView.aButton setImageEdgeInsets:UIEdgeInsetsMake(0, leftInset, 0, rightInset)];
     
     // Set the snap thresholds

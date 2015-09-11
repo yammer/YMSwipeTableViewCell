@@ -302,7 +302,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
         [self.leftView removeFromSuperview];
         [self.rightView removeFromSuperview];
         CGFloat velocity = [recognizer velocityInView:recognizer.view].x;
-        if (self.swipeEffect == YATableSwipeEffectDefault) {
+        if (self.swipeEffect == YATableSwipeEffectUnmask) {
             if (velocity < 0) {
                 self.rightView.frame = CGRectMake(CGRectGetWidth(self.frame) - CGRectGetWidth(self.rightView.frame), 0, CGRectGetWidth(self.rightView.frame), CGRectGetHeight(self.rightView.frame));
                 [self.swipeContainerView addSubview:self.rightView];
