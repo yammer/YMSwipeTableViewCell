@@ -3,7 +3,7 @@ YMSwipeTableViewCell
 
 YMSwipeTableViewCell is a lightweight library that enables table view cell swiping (seen in most mail applications). It is implemented as a UITableViewCell class category and can detect left or right horizontal swipes. Upon a left or right swipe, a swipe view is exposed. This library is meant to be flexible, so that any views can be exposed during a swipe and a myriad of actions can be taken during the swipe (e.g., swipe view animations, or cell snap back or destruction at the completion of a swipe). 
 
-The example app shows the right view as two buttons and the left view as a single button with a checkmark's alpha animating in proportion to the swipe content offset:
+The example app shows the right view as two buttons and the left view as a single button with a checkmark's alpha increasing in proportion to the swipe content offset:
                             
 <p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellSampleApp.gif?raw=true"/></p>
 
@@ -11,7 +11,7 @@ The example app shows the right view as two buttons and the left view as a singl
 
 * Users have complete control over the views exposed during a left or right swipe.
 
-* Configurable cell swipe animation:
+* Configurable cell swipe effect:
     - Unmasking 
 <p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellUnmaskingSync.gif?raw=true"/></p>
     - Trailing
@@ -49,25 +49,25 @@ self.leftSwipeView = leftView;
 [self addRightView:self.rightSwipeView];
 ```
 
-* Set the swipe effect:
+* Set the swipe effect (the default value is YATableSwipeEffectUnmask):
 
 ```objc
 [cell setSwipeEffect:YATableSwipeEffectUnmask];
 ```
 
-* Set the allowMultiple flag to enable multiple cells to be swiped at once if desired:
+* Set the allowMultiple flag to enable multiple cells to be swiped at once if desired (default is NO):
 
 ```objc
 self.allowMultiple = YES;
 ```
 
-* Set the swipeContainerViewBackgroundColor to change the default swipe container view background color.
+* Set the swipeContainerViewBackgroundColor to change the default swipe container view background color (default color is grayColor).
 
 ```objc
 self.swipeContainerViewBackgroundColor = [UIColor grayColor];
 ```
 
-* Set the right and left swipe snap threshold values:
+* Set the right and left swipe snap threshold values (the default value is 0, so right or left snaps will always occur when a swipe is initiated):
 
 ```objc
 self.rightSwipeSnapThreshold = self.bounds.size.width * 0.3;
@@ -102,7 +102,7 @@ self.leftSwipeSnapThreshold = self.bounds.size.width * 0.1;
 
 * Optionally set the modeWillChangeBlock to notify the subviews and/or view controller that a swipe mode will change.
 
-* In your view controller's cellForRowAtIndexPath delegate, instantiate a table view cell.
+* In your view controller's cellForRowAtIndexPath delegate, instantiate the table view cell.
 
 ```objc
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
