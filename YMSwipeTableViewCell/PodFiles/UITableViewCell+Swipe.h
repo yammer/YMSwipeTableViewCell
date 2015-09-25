@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, YATableSwipeDirection) {
     YATableSwipeDirectionLeft = 2
 };
 
-/** 
+/**
  *  Block definition used during a swipe callback.
  *
  *  @param  cell            The cell in which the swipe is occurring.
@@ -93,8 +93,10 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
 /** This block is called when a swipe has changed the state of the cell. */
 @property (nonatomic, strong) YMTableCellDidChangeModeBlock modeChangedBlock;
 
+/** Enable or disable swiping, defaults to YES **/
+@property (nonatomic, assign) BOOL swipingEnabled;
 
-/**     
+/**
  *  Adds the view exposed during a right to left swipe.
  *
  *  @param  view    The view beneath the cell which is exposed during a right to left swipe.
