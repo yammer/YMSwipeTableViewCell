@@ -130,7 +130,7 @@ Clone repo and manually add source to project.
 
 ###Option 2 
 CocoaPods:
-<pre>pod 'YMSwipeTableViewCell', '~> 1.0.1'</pre>
+<pre>pod 'YMSwipeTableViewCell', '~> 1.1.0'</pre>
 
 ##Contributing
 
