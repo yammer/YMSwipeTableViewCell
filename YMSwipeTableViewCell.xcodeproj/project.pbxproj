@@ -18,6 +18,11 @@
 		EA7F769F1B8E6E7000184BAE /* YMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F769E1B8E6E7000184BAE /* YMTableViewCell.m */; };
 		EA7F76A21B8FBAD900184BAE /* YMOneButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */; };
 		EA7F76AB1B9A343F00184BAE /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; };
+		EA9CB5FC1BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; settings = {ASSET_TAGS = (); }; };
+		EA9CB6071BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; };
+		EA9CB6081BD5897000046187 /* YMSwipeTableViewCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA9CB6101BD58A7E00046187 /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; settings = {ASSET_TAGS = (); }; };
+		EA9CB6111BD58A8600046187 /* UITableViewCell+Swipe.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7F76A91B9A343F00184BAE /* UITableViewCell+Swipe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +33,42 @@
 			remoteGlobalIDString = EA7F76621B7A977D00184BAE;
 			remoteInfo = YMSwipeTableViewCell;
 		};
+		EA9CB5FD1BD5897000046187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7F765B1B7A977D00184BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9CB5F11BD5897000046187;
+			remoteInfo = "YMSwipeTableViewCell-iOS";
+		};
+		EA9CB5FF1BD5897000046187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7F765B1B7A977D00184BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7F76621B7A977D00184BAE;
+			remoteInfo = YMSwipeTableViewCell;
+		};
+		EA9CB6051BD5897000046187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7F765B1B7A977D00184BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9CB5F11BD5897000046187;
+			remoteInfo = "YMSwipeTableViewCell-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA9CB60E1BD5897000046187 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA9CB6081BD5897000046187 /* YMSwipeTableViewCell.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA7F76631B7A977D00184BAE /* YMSwipeTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMSwipeTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +92,8 @@
 		EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOneButtonSwipeView.m; sourceTree = "<group>"; };
 		EA7F76A91B9A343F00184BAE /* UITableViewCell+Swipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+Swipe.h"; path = "PodFiles/UITableViewCell+Swipe.h"; sourceTree = "<group>"; };
 		EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+Swipe.m"; path = "PodFiles/UITableViewCell+Swipe.m"; sourceTree = "<group>"; };
+		EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YMSwipeTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9CB5FB1BD5897000046187 /* YMSwipeTableVlewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMSwipeTableVlewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9CB6071BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +109,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CB5EE1BD5897000046187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CB5F81BD5897000046187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9CB5FC1BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +146,8 @@
 			children = (
 				EA7F76631B7A977D00184BAE /* YMSwipeTableViewCell.app */,
 				EA7F767C1B7A977D00184BAE /* YMSwipeTableViewCellTests.xctest */,
+				EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */,
+				EA9CB5FB1BD5897000046187 /* YMSwipeTableVlewCellTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +211,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EA9CB5EF1BD5897000046187 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9CB6111BD58A8600046187 /* UITableViewCell+Swipe.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */ = {
 			isa = PBXNativeTarget;
@@ -159,10 +230,12 @@
 				EA7F765F1B7A977D00184BAE /* Sources */,
 				EA7F76601B7A977D00184BAE /* Frameworks */,
 				EA7F76611B7A977D00184BAE /* Resources */,
+				EA9CB60E1BD5897000046187 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA9CB6061BD5897000046187 /* PBXTargetDependency */,
 			);
 			name = YMSwipeTableViewCell;
 			productName = YMSwipeTableViewCell;
@@ -187,6 +260,43 @@
 			productReference = EA7F767C1B7A977D00184BAE /* YMSwipeTableViewCellTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EA9CB5F11BD5897000046187 /* YMSwipeTableViewCell-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA9CB60D1BD5897000046187 /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell-iOS" */;
+			buildPhases = (
+				EA9CB5ED1BD5897000046187 /* Sources */,
+				EA9CB5EE1BD5897000046187 /* Frameworks */,
+				EA9CB5EF1BD5897000046187 /* Headers */,
+				EA9CB5F01BD5897000046187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YMSwipeTableViewCell-iOS";
+			productName = "YMSwipeTableViewCell-iOS";
+			productReference = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA9CB5FA1BD5897000046187 /* YMSwipeTableViewCell-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA9CB60F1BD5897000046187 /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell-iOSTests" */;
+			buildPhases = (
+				EA9CB5F71BD5897000046187 /* Sources */,
+				EA9CB5F81BD5897000046187 /* Frameworks */,
+				EA9CB5F91BD5897000046187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA9CB5FE1BD5897000046187 /* PBXTargetDependency */,
+				EA9CB6001BD5897000046187 /* PBXTargetDependency */,
+			);
+			name = "YMSwipeTableViewCell-iOSTests";
+			productName = "YMSwipeTableViewCell-iOSTests";
+			productReference = EA9CB5FB1BD5897000046187 /* YMSwipeTableVlewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +311,13 @@
 					};
 					EA7F767B1B7A977D00184BAE = {
 						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EA7F76621B7A977D00184BAE;
+					};
+					EA9CB5F11BD5897000046187 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					EA9CB5FA1BD5897000046187 = {
+						CreatedOnToolsVersion = 7.0;
 						TestTargetID = EA7F76621B7A977D00184BAE;
 					};
 				};
@@ -220,6 +337,8 @@
 			targets = (
 				EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */,
 				EA7F767B1B7A977D00184BAE /* YMSwipeTableViewCellTests */,
+				EA9CB5F11BD5897000046187 /* YMSwipeTableViewCell-iOS */,
+				EA9CB5FA1BD5897000046187 /* YMSwipeTableViewCell-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +355,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EA7F767A1B7A977D00184BAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CB5F01BD5897000046187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CB5F91BD5897000046187 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,6 +400,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA9CB5ED1BD5897000046187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9CB6101BD58A7E00046187 /* UITableViewCell+Swipe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CB5F71BD5897000046187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -274,6 +422,21 @@
 			isa = PBXTargetDependency;
 			target = EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */;
 			targetProxy = EA7F767D1B7A977D00184BAE /* PBXContainerItemProxy */;
+		};
+		EA9CB5FE1BD5897000046187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA9CB5F11BD5897000046187 /* YMSwipeTableViewCell-iOS */;
+			targetProxy = EA9CB5FD1BD5897000046187 /* PBXContainerItemProxy */;
+		};
+		EA9CB6001BD5897000046187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA7F76621B7A977D00184BAE /* YMSwipeTableViewCell */;
+			targetProxy = EA9CB5FF1BD5897000046187 /* PBXContainerItemProxy */;
+		};
+		EA9CB6061BD5897000046187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA9CB5F11BD5897000046187 /* YMSwipeTableViewCell-iOS */;
+			targetProxy = EA9CB6051BD5897000046187 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -425,6 +588,74 @@
 			};
 			name = Release;
 		};
+		EA9CB6091BD5897000046187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = YMSwipeTableViewCell/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Microsoft.YMSwipeTableViewCell-iOS";
+				PRODUCT_NAME = YMSwipeTableViewCell;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA9CB60A1BD5897000046187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YMSwipeTableViewCell/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Microsoft.YMSwipeTableViewCell-iOS";
+				PRODUCT_NAME = YMSwipeTableViewCell;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA9CB60B1BD5897000046187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "YMSwipeTableViewCell-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Microsoft.YMSwipeTableViewCell-iOSTests";
+				PRODUCT_NAME = YMSwipeTableVlewCellTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMSwipeTableViewCell.app/YMSwipeTableViewCell";
+			};
+			name = Debug;
+		};
+		EA9CB60C1BD5897000046187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "YMSwipeTableViewCell-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Microsoft.YMSwipeTableViewCell-iOSTests";
+				PRODUCT_NAME = YMSwipeTableVlewCellTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMSwipeTableViewCell.app/YMSwipeTableViewCell";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +685,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EA9CB60D1BD5897000046187 /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA9CB6091BD5897000046187 /* Debug */,
+				EA9CB60A1BD5897000046187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA9CB60F1BD5897000046187 /* Build configuration list for PBXNativeTarget "YMSwipeTableViewCell-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA9CB60B1BD5897000046187 /* Debug */,
+				EA9CB60C1BD5897000046187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
