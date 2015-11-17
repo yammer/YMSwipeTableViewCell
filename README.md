@@ -5,7 +5,7 @@ YMSwipeTableViewCell is a lightweight library that enables table view cell swipi
 
 The example app shows the right view as two buttons and the left view as a single button with a checkmark's alpha increasing in proportion to the swipe content offset:
                             
-<p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellSampleApp.gif?raw=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/yammer/YMSwipeTableViewCell/master/github-assets/YMSwipeTableViewCellSampleApp.gif"/></p>
 
 ##Features
 
@@ -13,9 +13,9 @@ The example app shows the right view as two buttons and the left view as a singl
 
 * Configurable cell swipe effect:
     - Unmasking 
-<p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellUnmaskingSync.gif?raw=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/yammer/YMSwipeTableViewCell/master/github-assets/YMSwipeTableViewCellUnmaskingSync.gif"/></p>
     - Trailing
-<p align="center"><img src="https://github.com/aluong-yammer/YMSwipeTableViewCell/blob/master/github-assets/YMSwipeTableViewCellTrailingSync.gif?raw=true"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/yammer/YMSwipeTableViewCell/master/github-assets/YMSwipeTableViewCellTrailingSync.gif"/></p>
 * Block callback for cell swiping or cell mode change so that actions can be taken at any time during the swipe.
 * Configurable values for the snap-to-right or snap-to-left views threshold.
 * The ability to configure multiple cell swipe.
@@ -138,7 +138,7 @@ CocoaPods:
 
 ##Contributing
 
-Use [Github issues](https://github.com/aluong-yammer/YMSwipeTableViewCell/issues) to track bugs and feature requests.
+Use [Github issues](https://github.com/yammer/YMSwipeTableViewCell/issues) to track bugs and feature requests.
 
 ##Contact
 
