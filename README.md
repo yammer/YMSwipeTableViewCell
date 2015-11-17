@@ -128,9 +128,13 @@ self.leftSwipeSnapThreshold = self.bounds.size.width * 0.1;
 ###Option 1
 Clone repo and manually add source to project. 
 
-###Option 2 
+###Option 2
+Carthage:
+<pre>github "yammer/YMSwipeTableViewCell"</pre>
+
+###Option 3 
 CocoaPods:
-<pre>pod 'YMSwipeTableViewCell', '~> 1.1.1'</pre>
+<pre>pod 'YMSwipeTableViewCell', '~> 1.1.2'</pre>
 
 ##Contributing
 
