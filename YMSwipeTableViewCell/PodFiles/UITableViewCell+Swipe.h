@@ -119,6 +119,7 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
  *  @param  completion      This callback is executed after the animation sequence completes.
  *                          If the finished flag is true, then the animation has completed.
  *                          If the finished flag is false, then the animation will complete in the next run loop cycle.
+ *  @param  animate         BOOL flag determines if a cell animation will occur or not. 
  *
  */
 - (void)resetSwipe:(void (^)(BOOL finished))completion withAnimation:(BOOL)animate;
