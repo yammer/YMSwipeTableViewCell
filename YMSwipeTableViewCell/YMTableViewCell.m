@@ -101,7 +101,7 @@ static const NSInteger kRightSwipeViewWidth = 200;
 
 - (void)prepareForReuse
 {
-    [self resetSwipe:nil];
+    [self resetSwipe:nil withAnimation:NO];
     [super prepareForReuse];
 }
 

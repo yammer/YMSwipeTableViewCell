@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#define YMSwipeGoToDefaultMode @"YMSwipeGoToDefaultMode"
+static NSString * const YMSwipeGoToDefaultMode = @"YMSwipeGoToDefaultMode";
+static NSString * const YMSwipeGoToDefaultModeNotificationAnimationParameter = @"animate";
 
 /** Swipe state of the cell. */
 typedef NS_ENUM(NSInteger, YATableSwipeMode) {
@@ -120,7 +121,7 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
  *                          If the finished flag is false, then the animation will complete in the next run loop cycle.
  *
  */
-- (void)resetSwipe:(void (^)(BOOL finished))completion;
+- (void)resetSwipe:(void (^)(BOOL finished))completion withAnimation:(BOOL)animate;
 
 
 @end

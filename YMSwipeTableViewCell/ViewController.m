@@ -63,13 +63,13 @@ static const NSInteger kYMTableViewNumberOfRows = 50;
 
 - (void)swipeableTableViewCell:(YMTableViewCell *)cell didTriggerLeftViewButtonWithIndex:(NSInteger)index {
     if (index == 0) {
-        [cell resetSwipe:nil];
+        [cell resetSwipe:nil withAnimation:YES];
     }
 }
 
 - (void)swipeableTableViewCell:(YMTableViewCell *)cell didTriggerRightViewButtonWithIndex:(NSInteger)index {
     if (index == YMTableViewCellTwoButtonSwipeViewUndoButtonIndex) {
-        [cell resetSwipe:nil];
+        [cell resetSwipe:nil withAnimation:YES];
     } else if (index == YMTableViewCellTwoButtonSwipeViewTrashButtonIndex) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         self.numberOfRows--;

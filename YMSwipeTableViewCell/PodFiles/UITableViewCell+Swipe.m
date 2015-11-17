@@ -236,26 +236,26 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     }
 }
 
-- (void)resetSwipe:(void (^)(BOOL finished))completion
+- (void)resetSwipe:(void (^)(BOOL finished))completion withAnimation:(BOOL)animate
 {
     [self goToDefaultMode:^(BOOL finished) {
         if (completion) {
             completion(finished);
         }
-    }];
+    } withAnimation:animate];
 }
 
 - (void)goToDefaultTapGesture:(UIGestureRecognizer *)recognizer
 {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        [self goToDefaultMode:nil];
+        [self goToDefaultMode:nil withAnimation:YES];
     }
 }
 
 - (void)goToDefaultPanGesture:(UIGestureRecognizer *)recognizer
 {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
-        [self goToDefaultMode:nil];
+        [self goToDefaultMode:nil withAnimation:YES];
     }
 }
 
@@ -278,12 +278,13 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
 - (void)resetToDefault:(NSNotification *)notification
 {
     UITableViewCell *cell = [notification object];
+    BOOL animate = [(notification.userInfo[YMSwipeGoToDefaultModeNotificationAnimationParameter]) boolValue];
     if (![cell isEqual:self]) {
-        [self goToDefaultMode:nil];
+        [self goToDefaultMode:nil withAnimation:animate];
     }
 }
 
-- (void)goToDefaultMode:(void (^)(BOOL finished))completion
+- (void)goToDefaultMode:(void (^)(BOOL finished))completion withAnimation:(BOOL)animate
 {
     if (self.swipeMode != YATableSwipeModeDefault) {
         self.swipeMode = YATableSwipeModeDefault;
@@ -291,7 +292,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
             if (completion) {
                 completion(finished);
             }
-        }];
+        } withAnimation:animate];
     }
 }
 
@@ -338,7 +339,8 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
         snapshotView.backgroundColor = self.backgroundColor;
         [self.swipeContainerView addSubview:self.swipeView];
         if (self.allowMultiple == NO) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:YMSwipeGoToDefaultMode object:self];
+            NSDictionary *userInfo = @{YMSwipeGoToDefaultModeNotificationAnimationParameter : @YES};
+            [[NSNotificationCenter defaultCenter] postNotificationName:YMSwipeGoToDefaultMode object:self userInfo:userInfo];
         }
     };
     
@@ -393,13 +395,13 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     else if (recognizer.state == UIGestureRecognizerStateEnded){
         YATableSwipeMode nextMode = [self modeForVelocity:[recognizer velocityInView:recognizer.view] translation:translation];
         self.swipeMode = nextMode;
-        [self goToCurrentSwipeMode:nil];
+        [self goToCurrentSwipeMode:nil withAnimation:YES];
         self.startDirection = YATableSwipeDirectionNone;
     }
     else if(recognizer.state == UIGestureRecognizerStateFailed ||
             recognizer.state == UIGestureRecognizerStateCancelled){
         self.startDirection = YATableSwipeDirectionNone;
-        [self goToDefaultMode:nil];
+        [self goToDefaultMode:nil withAnimation:NO];
     }
 }
 
@@ -408,42 +410,58 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     return CGRectMake(translation.x >= 0 ? -CGRectGetWidth(view.bounds): (CGRectGetWidth(self.bounds)), 0, CGRectGetWidth(view.bounds), CGRectGetHeight(view.bounds));
 }
 
-- (void)goToCurrentSwipeMode:(void (^)(BOOL finished))completion
+- (void)goToCurrentSwipeMode:(void (^)(BOOL finished))completion withAnimation:(BOOL)animate
 {
     YATableSwipeMode mode = self.swipeMode;
     if (self.modeWillChangeBlock) {
         self.modeWillChangeBlock(self, mode);
     }
+    
     CATransform3D transform = [self transformForMode:mode];
-    [UIView animateWithDuration:YKTableGestureAnimationDuration delay:0.0 options: mode == YATableSwipeModeDefault ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveLinear animations:^{
-        [self.swipeView.layer setTransform:transform];
-        if (self.swipeEffect == YATableSwipeEffectTrail) {
-            self.leftView.layer.transform = self.swipeView.layer.transform;
-            self.rightView.layer.transform = self.swipeView.layer.transform;
+    
+    __weak typeof(self) weakSelf = self;
+    void(^goToCurrentSwipeModeActionBlock)() = ^{
+        [weakSelf.swipeView.layer setTransform:transform];
+        if (weakSelf.swipeEffect == YATableSwipeEffectTrail) {
+            weakSelf.leftView.layer.transform = weakSelf.swipeView.layer.transform;
+            weakSelf.rightView.layer.transform = weakSelf.swipeView.layer.transform;
         }
-    } completion:^(BOOL finished) {
-        if (finished) {
-            if (mode == YATableSwipeModeDefault) {
+    };
+    
+    void(^goToCurrentSwipeModeCompletionActionBlock)() = ^{
+        if (mode == YATableSwipeModeDefault) {
+            [weakSelf.swipeContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [weakSelf.swipeContainerView removeFromSuperview];
+            [weakSelf.swipeView removeFromSuperview];
+            weakSelf.swipeView = nil;
+        }
+        if (weakSelf.modeChangedBlock) {
+            weakSelf.modeChangedBlock(weakSelf, mode);
+        }
+    };
+
+    if (animate) {
+        [UIView animateWithDuration:YKTableGestureAnimationDuration delay:0.0 options: mode == YATableSwipeModeDefault ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveLinear animations:^{
+                goToCurrentSwipeModeActionBlock();
+        } completion:^(BOOL finished) {
+            if (finished) {
+                goToCurrentSwipeModeCompletionActionBlock();
+            }
+            else{
                 [self.swipeContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
                 [self.swipeContainerView removeFromSuperview];
                 [self.swipeView removeFromSuperview];
                 self.swipeView = nil;
             }
-            if (self.modeChangedBlock) {
-                self.modeChangedBlock(self, mode);
+            self.currentSwipeMode = mode;
+            if (completion) {
+                completion(finished);
             }
-        }
-        else{
-            [self.swipeContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-            [self.swipeContainerView removeFromSuperview];
-            [self.swipeView removeFromSuperview];
-            self.swipeView = nil;
-        }
-        self.currentSwipeMode = mode;
-        if (completion) {
-            completion(finished);
-        }
-    }];
+        }];
+    } else {
+        goToCurrentSwipeModeActionBlock();
+        goToCurrentSwipeModeCompletionActionBlock();
+    }
 }
 
 - (CATransform3D)transformForMode:(YATableSwipeMode)mode
