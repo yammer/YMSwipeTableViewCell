@@ -134,7 +134,7 @@ Carthage:
 
 ###Option 3 
 CocoaPods:
-<pre>pod 'YMSwipeTableViewCell', '~> 2.0.0'</pre>
+<pre>pod 'YMSwipeTableViewCell', '~> 2.1.0'</pre>
 
 ##Contributing
 
