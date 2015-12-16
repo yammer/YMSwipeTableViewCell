@@ -218,13 +218,13 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     recognizer.delegate = self;
     self.panGestureRecognizer = recognizer;
     [self addGestureRecognizer:self.panGestureRecognizer];
-    
+
     self.swipeContainerView = [[UIView alloc] init];
     self.swipeContainerView.backgroundColor = (self.swipeContainerViewBackgroundColor == nil) ? [UIColor lightGrayColor] : self.swipeContainerViewBackgroundColor;
-    self.swipeContainerView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.swipeContainerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.swipeContainerView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToDefaultTapGesture:)]];
     [self.swipeContainerView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(goToDefaultPanGesture:)]];
-    
+
     @try {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:YMSwipeGoToDefaultMode object:nil];
     }
@@ -305,7 +305,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     if (translation.x < 0 && self.rightView == nil) {
         return;
     }
-    
+
     void (^initializeGestureRecognizerBeginningState)(void) = ^{
         self.contentView.clipsToBounds = YES;
         [self.contentView addSubview:self.swipeContainerView];
@@ -343,7 +343,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
             [[NSNotificationCenter defaultCenter] postNotificationName:YMSwipeGoToDefaultMode object:self userInfo:userInfo];
         }
     };
-    
+
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         initializeGestureRecognizerBeginningState();
     }
@@ -352,7 +352,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
         if (!([self.rightView isDescendantOfView:self.swipeContainerView] || [self.leftView isDescendantOfView:self.swipeContainerView])) {
             initializeGestureRecognizerBeginningState();
         }
-        
+
         // lock cell when trying to swipe to the opposite direction
         if (self.startDirection != YATableSwipeDirectionNone) {
             if (translation.x < 0 &&
@@ -372,7 +372,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
                 self.startDirection = YATableSwipeDirectionRight;
             }
         }
-        
+
         [self.swipeView.layer setTransform:CATransform3DMakeTranslation(translation.x, 0.0, 1.0)];
         if (self.swipeEffect == YATableSwipeEffectTrail) {
             if (fabs(translation.x) < CGRectGetWidth(self.leftView.frame)) {
@@ -503,7 +503,7 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     if (!self.swipingEnabled) {
         return NO;
     }
-    
+
     if (gestureRecognizer == self.panGestureRecognizer) {
         CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:gestureRecognizer.view];
         if (translation.y == 0) {
