@@ -97,6 +97,9 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
 /** Enable or disable swiping, defaults to YES **/
 @property (nonatomic, assign) BOOL swipingEnabled;
 
+/** Returns YES if the pan gesture recognizer detects a swipe occurring. */
+@property (nonatomic, assign) BOOL cellIsBeingSwiped;
+
 /**
  *  Adds the view exposed during a right to left swipe.
  *

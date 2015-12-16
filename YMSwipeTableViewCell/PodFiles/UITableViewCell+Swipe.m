@@ -515,4 +515,9 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     }
 }
 
+// when the pan gesture recognizer detects a swipe the swipeView should be set to a view; at all other times, the swipeView should be nil
+- (BOOL)cellIsBeingSwiped {
+    return self.swipeView != nil;
+}
+
 @end
