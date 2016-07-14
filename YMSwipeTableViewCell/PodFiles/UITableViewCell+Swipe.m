@@ -299,12 +299,6 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
 - (void)panGesture:(UIPanGestureRecognizer *)recognizer
 {
     CGPoint translation = [recognizer translationInView:recognizer.view];
-    if (translation.x > 0 && self.leftView == nil) {
-        return;
-    }
-    if (translation.x < 0 && self.rightView == nil) {
-        return;
-    }
 
     void (^initializeGestureRecognizerBeginningState)(void) = ^{
         self.contentView.clipsToBounds = YES;
@@ -506,7 +500,13 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
 
     if (gestureRecognizer == self.panGestureRecognizer) {
         CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:gestureRecognizer.view];
-        if (translation.y == 0) {
+        if (translation.y == 0.f) {
+            if (translation.x >= 0.f && self.leftView == nil) {
+                return NO;
+            }
+            if (translation.x <= 0.f && self.rightView == nil) {
+                return NO;
+            }
             return YES;
         }
         return NO;
