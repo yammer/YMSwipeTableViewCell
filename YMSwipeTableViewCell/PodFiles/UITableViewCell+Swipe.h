@@ -14,6 +14,8 @@ static NSString * const YMSwipeGoToDefaultModeNotificationAnimationParameter = @
 typedef NS_ENUM(NSInteger, YATableSwipeMode) {
     /** The default cell state. The user has not begun swiping the cell. */
     YATableSwipeModeDefault,
+    /** The left or right swipe view is not completely exposed. The user is currently swiping. */
+    YATableSwipeModeSwiping,
     /** The left swipe view is completely exposed. The user has completed swiping from right to left. */
     YATableSwipeModeLeftON,
     /** The right swipe view is completely exposed. The user has completed swiping from left to right. */
