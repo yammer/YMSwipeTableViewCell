@@ -342,6 +342,8 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
         initializeGestureRecognizerBeginningState();
     }
     else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        self.swipeMode = YATableSwipeModeSwiping;
+        
         // handle the case when velocity is 0 and no right or left views are created
         if (!([self.rightView isDescendantOfView:self.swipeContainerView] || [self.leftView isDescendantOfView:self.swipeContainerView])) {
             initializeGestureRecognizerBeginningState();
@@ -478,13 +480,13 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
         return YATableSwipeModeDefault;
     }
     if (velocity.x < 0) {
-        if (self.swipeMode == YATableSwipeModeDefault &&
+        if (self.swipeMode == YATableSwipeModeSwiping &&
             self.startDirection == YATableSwipeDirectionLeft) {
             return YATableSwipeModeRightON;
         }
     }
     else if (velocity.x > 0) {
-        if (self.swipeMode == YATableSwipeModeDefault &&
+        if (self.swipeMode == YATableSwipeModeSwiping &&
             self.startDirection == YATableSwipeDirectionRight) {
             return YATableSwipeModeLeftON;
         }
