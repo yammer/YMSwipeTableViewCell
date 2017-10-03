@@ -416,23 +416,31 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     CATransform3D transform = [self transformForMode:mode];
     
     __weak typeof(self) weakSelf = self;
-    void(^goToCurrentSwipeModeActionBlock)() = ^{
-        [weakSelf.swipeView.layer setTransform:transform];
-        if (weakSelf.swipeEffect == YATableSwipeEffectTrail) {
-            weakSelf.leftView.layer.transform = weakSelf.swipeView.layer.transform;
-            weakSelf.rightView.layer.transform = weakSelf.swipeView.layer.transform;
+    void(^goToCurrentSwipeModeActionBlock)(void) = ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        
+        if (strongSelf) {
+            [strongSelf.swipeView.layer setTransform:transform];
+            if (strongSelf.swipeEffect == YATableSwipeEffectTrail) {
+                strongSelf.leftView.layer.transform = strongSelf.swipeView.layer.transform;
+                strongSelf.rightView.layer.transform = strongSelf.swipeView.layer.transform;
+            }
         }
     };
     
-    void(^goToCurrentSwipeModeCompletionActionBlock)() = ^{
-        if (mode == YATableSwipeModeDefault) {
-            [weakSelf.swipeContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-            [weakSelf.swipeContainerView removeFromSuperview];
-            [weakSelf.swipeView removeFromSuperview];
-            weakSelf.swipeView = nil;
-        }
-        if (weakSelf.modeChangedBlock) {
-            weakSelf.modeChangedBlock(weakSelf, mode);
+    void(^goToCurrentSwipeModeCompletionActionBlock)(void) = ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        
+        if (strongSelf) {
+            if (mode == YATableSwipeModeDefault) {
+                [strongSelf.swipeContainerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+                [strongSelf.swipeContainerView removeFromSuperview];
+                [strongSelf.swipeView removeFromSuperview];
+                strongSelf.swipeView = nil;
+            }
+            if (strongSelf.modeChangedBlock) {
+                strongSelf.modeChangedBlock(strongSelf, mode);
+            }
         }
     };
 
