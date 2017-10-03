@@ -18,10 +18,10 @@
 		EA7F769F1B8E6E7000184BAE /* YMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F769E1B8E6E7000184BAE /* YMTableViewCell.m */; };
 		EA7F76A21B8FBAD900184BAE /* YMOneButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76A11B8FBAD900184BAE /* YMOneButtonSwipeView.m */; };
 		EA7F76AB1B9A343F00184BAE /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; };
-		EA9CB5FC1BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; settings = {ASSET_TAGS = (); }; };
+		EA9CB5FC1BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; };
 		EA9CB6071BD5897000046187 /* YMSwipeTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; };
 		EA9CB6081BD5897000046187 /* YMSwipeTableViewCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA9CB5F21BD5897000046187 /* YMSwipeTableViewCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA9CB6101BD58A7E00046187 /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; settings = {ASSET_TAGS = (); }; };
+		EA9CB6101BD58A7E00046187 /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F76AA1B9A343F00184BAE /* UITableViewCell+Swipe.m */; };
 		EA9CB6111BD58A8600046187 /* UITableViewCell+Swipe.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7F76A91B9A343F00184BAE /* UITableViewCell+Swipe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -303,7 +303,7 @@
 		EA7F765B1B7A977D00184BAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Microsoft;
 				TargetAttributes = {
 					EA7F76621B7A977D00184BAE = {
@@ -460,13 +460,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -505,13 +513,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -596,6 +612,7 @@
 		EA9CB6091BD5897000046187 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -618,6 +635,7 @@
 		EA9CB60A1BD5897000046187 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
