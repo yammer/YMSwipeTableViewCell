@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YMSwipeTableViewCell'
-  s.version          = '2.1.3'
+  s.version          = '2.1.4'
   s.summary          = 'YMSwipeTableViewCell is a lightweight library that enables table view cell swiping.'
   s.description      = 'YMSwipeTableViewCell is a lightweight library that enables table view cell swiping (seen in most mail applications). It is implemented as a UITableViewCell class category and can detect left or right horizontal swipes. Upon a left or right swipe, a swipe view is exposed. This library is meant to be flexible, so that any views can be exposed during a swipe and a myriad of actions can be taken during the swipe (e.g., swipe view animations, or cell snap back or destruction at the completion of a swipe).'
   s.homepage         = 'https://github.com/yammer/YMSwipeTableViewCell.git'
